@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: 'Shanti', sans-serif;
+    
+    /* font-size: 15px; */
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+}
+
+/* .header, footer {
+    background-color: #F8F8FF;
+} */
+
+.btn {
+    color: #005696;
+}
+
+.navbar-nav,
+.mr-auto {
+flex: 1;
+margin: auto !important;
+display: flex;
+justify-content: space-around;
+}
+
+.img-logo {
+    width: 140px;
+}
+
+.container {
+    max-width: 1000px;
+  
+}
+
+.badge {
+    background-color: #EF6539;
+}
+
+.container-form {
+    max-width: 700px;
+}
+
+
+
+
+.drawing {
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.about-us {
+    background-color: #005696;
+
+}
+
+/* .btn {
+    color: #005696;
+} */
+
+.row-striped:nth-of-type(odd){
+    background-color: #efefef;
+    border-left: 4px #000000 solid;
+  }
+  
+  .row-striped:nth-of-type(even){
+    background-color: #ffffff;
+    border-left: 4px #efefef solid;
+  }
+  
+  .row-striped {
+      padding: 15px 0;
+  }
+
+.fab, .fas, .active {
+    color: #EF6539 !important;
+}
+
+.active:hover {
+    color: #BEBEBE;
+}
+
+.subtitle {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+.fa-instagram, .fa-facebook-f {
+    font-size: 25px;
+}
+
+.fa-shopping-cart {
+    font-size: 20px;
+}
+
+/* .info {
+    background-color: #005696;
+    color: #EF6539;
+} */
+
+/* .card {
+   min-height: 500px;
+} */
+
+/* .card-img-top {
+    min-height: 350px;
+} */
+
+/* .about {
+    background-color: #ffecb3  ;
+} */
+
+
+
+.img {
+    max-width: 287px;
+    max-height: 287px;
+}
+
+.sponsor-sel{
+    max-width: 120px;
+}
+
+.sponsor-pub {
+    max-width:90px;
+}
+
+/* .dropdown:hover .dropdown-menu {
+    display: block;
+ } */
+
+ /* .navbar-nav li:hover>.dropdown-menu {
+    display: block;
+  } */
+
+ 
