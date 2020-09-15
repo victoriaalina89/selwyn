@@ -1,0 +1,129 @@
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_exec_wrapper/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533485.294)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533485.31)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533485.961)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_wrapper_preparation/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533485.962)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_app_load_or_exec/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533485.962)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_app_load_or_exec/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533486.052)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_app_load_or_exec/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533486.052)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_listen/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533486.052)
+App 1111 output: (node:1111) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+App 1111 output: (Use `node --trace-warnings ...` to show where the warning was created)
+App 1111 output: server on port 8000
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_listen/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533486.058)
+App 1111 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXX4Ofr8T/response/steps/subprocess_listen/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599533486.058)
+App 28952 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXzc5AaH/response/steps/subprocess_exec_wrapper/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616054.975)
+App 28952 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXzc5AaH/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616054.992)
+App 28952 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXzc5AaH/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616055.61)
+App 28952 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXzc5AaH/response/steps/subprocess_wrapper_preparation/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616055.61)
+App 28952 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXzc5AaH/response/steps/subprocess_app_load_or_exec/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616055.611)
+App 28952 output: internal/modules/cjs/loader.js:1088
+App 28952 output:   throw err;
+App 28952 output:   ^
+App 28952 output: 
+App 28952 output: Error: Cannot find module 'express-basic-auth'
+App 28952 output: Require stack:
+App 28952 output: - /home/selwynsw/selwyn/src/index.js
+App 28952 output: - /opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js
+App 28952 output:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1085:15)
+App 28952 output:     at Function.Module._load (internal/modules/cjs/loader.js:928:27)
+App 28952 output:     at Module.require (internal/modules/cjs/loader.js:1145:19)
+App 28952 output:     at Module.require (/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js:80:25)
+App 28952 output:     at require (internal/modules/cjs/helpers.js:75:18)
+App 28952 output:     at Object.<anonymous> (/home/selwynsw/selwyn/src/index.js:4:19)
+App 28952 output:     at Module._compile (internal/modules/cjs/loader.js:1256:30)
+App 28952 output:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)
+App 28952 output:     at Module.load (internal/modules/cjs/loader.js:1105:32)
+App 28952 output:     at Function.Module._load (internal/modules/cjs/loader.js:967:14) {
+App 28952 output:   code: 'MODULE_NOT_FOUND',
+App 28952 output:   requireStack: [
+App 28952 output:     '/home/selwynsw/selwyn/src/index.js',
+App 28952 output:     '/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js'
+App 28952 output:   ]
+App 28952 output: }
+App 29115 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXDKcrmP/response/steps/subprocess_exec_wrapper/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616056.662)
+App 29115 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXDKcrmP/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616056.666)
+App 29115 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXDKcrmP/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616056.697)
+App 29115 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXDKcrmP/response/steps/subprocess_wrapper_preparation/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616056.697)
+App 29115 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXDKcrmP/response/steps/subprocess_app_load_or_exec/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616056.698)
+App 29115 output: internal/modules/cjs/loader.js:1088
+App 29115 output:   throw err;
+App 29115 output:   ^
+App 29115 output: 
+App 29115 output: Error: Cannot find module 'express-basic-auth'
+App 29115 output: Require stack:
+App 29115 output: - /home/selwynsw/selwyn/src/index.js
+App 29115 output: - /opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js
+App 29115 output:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1085:15)
+App 29115 output:     at Function.Module._load (internal/modules/cjs/loader.js:928:27)
+App 29115 output:     at Module.require (internal/modules/cjs/loader.js:1145:19)
+App 29115 output:     at Module.require (/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js:80:25)
+App 29115 output:     at require (internal/modules/cjs/helpers.js:75:18)
+App 29115 output:     at Object.<anonymous> (/home/selwynsw/selwyn/src/index.js:4:19)
+App 29115 output:     at Module._compile (internal/modules/cjs/loader.js:1256:30)
+App 29115 output:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)
+App 29115 output:     at Module.load (internal/modules/cjs/loader.js:1105:32)
+App 29115 output:     at Function.Module._load (internal/modules/cjs/loader.js:967:14) {
+App 29115 output:   code: 'MODULE_NOT_FOUND',
+App 29115 output:   requireStack: [
+App 29115 output:     '/home/selwynsw/selwyn/src/index.js',
+App 29115 output:     '/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js'
+App 29115 output:   ]
+App 29115 output: }
+App 29265 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXlksw0f/response/steps/subprocess_exec_wrapper/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616063.582)
+App 29265 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXlksw0f/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616063.586)
+App 29265 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXlksw0f/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616063.617)
+App 29265 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXlksw0f/response/steps/subprocess_wrapper_preparation/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616063.617)
+App 29265 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXlksw0f/response/steps/subprocess_app_load_or_exec/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616063.617)
+App 29265 output: internal/modules/cjs/loader.js:1088
+App 29265 output:   throw err;
+App 29265 output:   ^
+App 29265 output: 
+App 29265 output: Error: Cannot find module 'express-basic-auth'
+App 29265 output: Require stack:
+App 29265 output: - /home/selwynsw/selwyn/src/index.js
+App 29265 output: - /opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js
+App 29265 output:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1085:15)
+App 29265 output:     at Function.Module._load (internal/modules/cjs/loader.js:928:27)
+App 29265 output:     at Module.require (internal/modules/cjs/loader.js:1145:19)
+App 29265 output:     at Module.require (/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js:80:25)
+App 29265 output:     at require (internal/modules/cjs/helpers.js:75:18)
+App 29265 output:     at Object.<anonymous> (/home/selwynsw/selwyn/src/index.js:4:19)
+App 29265 output:     at Module._compile (internal/modules/cjs/loader.js:1256:30)
+App 29265 output:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)
+App 29265 output:     at Module.load (internal/modules/cjs/loader.js:1105:32)
+App 29265 output:     at Function.Module._load (internal/modules/cjs/loader.js:967:14) {
+App 29265 output:   code: 'MODULE_NOT_FOUND',
+App 29265 output:   requireStack: [
+App 29265 output:     '/home/selwynsw/selwyn/src/index.js',
+App 29265 output:     '/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js'
+App 29265 output:   ]
+App 29265 output: }
+App 29405 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXdL7fZY/response/steps/subprocess_exec_wrapper/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616064.295)
+App 29405 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXdL7fZY/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616064.301)
+App 29405 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXdL7fZY/response/steps/subprocess_wrapper_preparation/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616064.334)
+App 29405 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXdL7fZY/response/steps/subprocess_wrapper_preparation/end_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616064.335)
+App 29405 output: Warning: unable to write to /var/passenger/passenger.spawn.XXXXdL7fZY/response/steps/subprocess_app_load_or_exec/begin_time: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received type number (1599616064.335)
+App 29405 output: internal/modules/cjs/loader.js:1088
+App 29405 output:   throw err;
+App 29405 output:   ^
+App 29405 output: 
+App 29405 output: Error: Cannot find module 'express-basic-auth'
+App 29405 output: Require stack:
+App 29405 output: - /home/selwynsw/selwyn/src/index.js
+App 29405 output: - /opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js
+App 29405 output:     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1085:15)
+App 29405 output:     at Function.Module._load (internal/modules/cjs/loader.js:928:27)
+App 29405 output:     at Module.require (internal/modules/cjs/loader.js:1145:19)
+App 29405 output:     at Module.require (/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js:80:25)
+App 29405 output:     at require (internal/modules/cjs/helpers.js:75:18)
+App 29405 output:     at Object.<anonymous> (/home/selwynsw/selwyn/src/index.js:4:19)
+App 29405 output:     at Module._compile (internal/modules/cjs/loader.js:1256:30)
+App 29405 output:     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)
+App 29405 output:     at Module.load (internal/modules/cjs/loader.js:1105:32)
+App 29405 output:     at Function.Module._load (internal/modules/cjs/loader.js:967:14) {
+App 29405 output:   code: 'MODULE_NOT_FOUND',
+App 29405 output:   requireStack: [
+App 29405 output:     '/home/selwynsw/selwyn/src/index.js',
+App 29405 output:     '/opt/passenger-5.3.7-9.el7.cloudlinux/src/helper-scripts/node-loader.js'
+App 29405 output:   ]
+App 29405 output: }

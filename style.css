@@ -4,17 +4,13 @@
     padding: 0;
     line-height: 1.5em;
     font-family: 'Shanti', sans-serif;
-    
-    /* font-size: 15px; */
 }
 
 body {
     font-family: 'Epilogue', sans-serif;
+    min-width: 360px;
 }
 
-/* .header, footer {
-    background-color: #F8F8FF;
-} */
 
 .btn {
     color: #005696;
@@ -37,6 +33,25 @@ justify-content: space-around;
   
 }
 
+.fas{
+    color: #fc9c4c;
+    font-size: 28px;
+}
+
+hr {
+    background-color: #fc9c4c;
+}
+
+.mail {
+    color: #212529 !important;
+    text-decoration:none;
+}
+
+.mail:hover {
+    text-decoration: none;
+} 
+
+
 .badge {
     background-color: #EF6539;
 }
@@ -46,42 +61,36 @@ justify-content: space-around;
 }
 
 
-
-
 .drawing {
-    max-width: 300px;
-    min-width: 100px;
+    max-width:30%;
+    min-width:250px;
+    
 }
 
 .about-us {
-    background-color: #005696;
-
+    background-color: #04336f;
 }
 
-/* .btn {
-    color: #005696;
-} */
+.btn {
+    background-color: #04336f;
+}
 
-.row-striped:nth-of-type(odd){
+.row-striped:nth-of-type(even){
     background-color: #efefef;
-    border-left: 4px #000000 solid;
+    border-left: 4px #d1d1d1 solid;
   }
   
-  .row-striped:nth-of-type(even){
+.row-striped:nth-of-type(odd){
     background-color: #ffffff;
     border-left: 4px #efefef solid;
-  }
+}
   
-  .row-striped {
-      padding: 15px 0;
-  }
-
-.fab, .fas, .active {
-    color: #EF6539 !important;
+.fab, .fa-map-marker-alt, .fa-envelope, .fa {
+    color: #EF6539;
 }
 
-.active:hover {
-    color: #BEBEBE;
+a {
+    text-decoration: none;
 }
 
 .subtitle {
@@ -97,28 +106,15 @@ justify-content: space-around;
     font-size: 20px;
 }
 
-/* .info {
-    background-color: #005696;
-    color: #EF6539;
-} */
-
-/* .card {
-   min-height: 500px;
-} */
-
-/* .card-img-top {
-    min-height: 350px;
-} */
-
-/* .about {
-    background-color: #ffecb3  ;
-} */
 
 
+.info {
+    background-color: #585858;
+}
 
 .img {
     max-width: 287px;
-    max-height: 287px;
+    max-height: 230px;
 }
 
 .sponsor-sel{
@@ -129,12 +125,3 @@ justify-content: space-around;
     max-width:90px;
 }
 
-/* .dropdown:hover .dropdown-menu {
-    display: block;
- } */
-
- /* .navbar-nav li:hover>.dropdown-menu {
-    display: block;
-  } */
-
- 
