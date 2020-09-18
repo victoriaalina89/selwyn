@@ -4,6 +4,7 @@
     padding: 0;
     line-height: 1.5em;
     font-family: 'Shanti', sans-serif;
+    line-height: 35px
 }
 
 body {
@@ -28,10 +29,10 @@ justify-content: space-around;
     width: 140px;
 }
 
-.container {
-    max-width: 1000px;
+/* .container {
+    max-width: 1100px;
   
-}
+} */
 
 .fa-quote-right, .fa-quote-left{
     color: #fc9c4c;
@@ -62,13 +63,192 @@ justify-content: space-around;
     min-width:250px;   
 }
 
-.about-us, .sponsors {
+.about-us, .sponsors{
     background-color: #04336f;
 }
 
-.sponsors {
-    min-height: 300px;
+.text-blue {
+    color: #04336f;
 }
+
+.sponsors {
+    min-height: 320px;
+    /* background-color: #efefef; */
+}
+
+/* .sponsors-title {
+    color: #fc9c4c;
+} */
+
+.btn {
+    background-color: #04336f;
+}
+
+.row-striped:nth-of-type(even){
+    background-color: #efefef;
+    border-left: 4px #d1d1d1 solid;
+  }
+  
+.row-striped:nth-of-type(odd){
+    background-color: #ffffff;
+    border-left: 4px #efefef solid;
+}
+  
+.fab, .fa-map-marker-alt, .fa-envelope, .fa, .memb-name {
+    color: #EF6539;
+}
+
+a {
+    text-decoration: none;
+}
+
+.subtitle {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+.fa-instagram, .fa-facebook-f {
+    font-size: 25px;
+}
+
+.fa-shopping-cart {
+    font-size: 20px;
+}
+
+
+
+.info {
+    background-color: #585858;
+}
+
+.img {
+    max-width: 287px;
+    max-height: 287px;
+}
+
+.about-img {
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.text-1 {
+    background-color: #E0FFFF;
+}
+
+.sponsor-sel{
+    max-width: 120px;
+}
+
+.sponsor-pub {
+    max-width:90px;
+}
+
+.card-img-top {
+    max-width: 180px;
+}
+
+/* .memb-rol {
+    color: #04336f;
+} */
+
+.spl {
+    border-top: 40px solid #ffffff;
+    border-bottom: 40px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.border-black {
+    border: 1px solid #000000;
+}
+
+.card-img {
+    max-width: 150px;
+    max-height: 135px;
+}
+
+.challenge {
+    border-top: 40px solid #171d26;
+    border-bottom: 40px solid #171d26;
+}
+
+.swa {
+    border-top: 20px solid #3f3936;
+    border-bottom: 20px solid #3f3936;
+}
+
+.motel {
+    border-top: 20px solid #ffffff;
+    border-bottom: 20px solid #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn {
+    color: #005696;
+}
+
+.navbar-nav,
+.mr-auto {
+flex: 1;
+margin: auto !important;
+display: flex;
+justify-content: space-around;
+}
+
+.img-logo {
+    width: 140px;
+}
+
+.container {
+    max-width: 1000px;
+  
+}
+
+.fas{
+    color: #fc9c4c;
+    font-size: 28px;
+}
+
+.mail {
+    color: #212529 !important;
+    text-decoration:none;
+}
+
+.mail:hover {
+    text-decoration: none;
+} 
+
+
+.badge {
+    background-color: #EF6539;
+}
+
+.container-form {
+    max-width: 700px;
+}
+
+
+.drawing {
+    max-width:30%;
+    min-width:250px;
+    
+}
+
+/* .about-us {
+    background-color: #387ca4;
+} */
 
 .btn {
     background-color: #04336f;
@@ -105,6 +285,10 @@ a {
     font-size: 20px;
 }
 
+/* .text-1 {
+    background-color: #387ca4;
+} */
+
 
 
 .info {
@@ -113,7 +297,7 @@ a {
 
 .img {
     max-width: 287px;
-    max-height: 287px;
+    max-height: 230px;
 }
 
 .sponsor-sel{
@@ -124,42 +308,27 @@ a {
     max-width:90px;
 }
 
-.card-img-top {
-    max-width: 180px;
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.carousel-sponsors {
+    bottom: -50px;
 }
 
-.memb-rol {
-    color: #04336f;
-}
 
-.spl {
-    border-top: 40px solid #ffffff;
-    border-bottom: 40px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #ffffff;
-}
+@media(max-width:992px) {
+    .container-about {
+        display: flex;
+        flex-direction: column;
+    }
+    .container-img{
+        order: 1;
+    }
+    .container-text{
+        order: 2;
+    }
 
-.border-white {
-    border: 1px solid #ffffff;
 }
-
-.card-img {
-    max-width: 150px;
-    max-height: 135px;
-}
-
-.challenge {
-    border-top: 40px solid #171d26;
-    border-bottom: 40px solid #171d26;
-}
-
-.swa {
-    border-top: 20px solid #3f3936;
-    border-bottom: 20px solid #3f3936;
-}
-
-.motel {
-    border-top: 20px solid #ffffff;
-    border-bottom: 20px solid #fff;
-}
-
