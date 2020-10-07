@@ -3,8 +3,9 @@
     box-sizing: border-box;
     padding: 0;
     line-height: 1.5em;
-    font-family: 'Shanti', sans-serif;
-    line-height: 35px
+    /* font-family: 'Shanti', sans-serif; */
+    font-family: 'Quicksand', sans-serif;
+    line-height: 25px
 }
 
 body {
@@ -13,8 +14,8 @@ body {
 }
 
 
-.btn {
-    color: #005696;
+.active-link {
+    color: #0f356a !important;
 }
 
 .navbar-nav,
@@ -23,10 +24,6 @@ flex: 1;
 margin: auto !important;
 display: flex;
 justify-content: space-around;
-}
-
-.img-logo {
-    width: 140px;
 }
 
 /* .container {
@@ -49,22 +46,49 @@ justify-content: space-around;
 } 
 
 
-.badge {
+/* .badge {
     background-color: #EF6539;
-}
+} */
 
-.container-form {
-    max-width: 700px;
-}
+
+
 
 
 .drawing {
-    max-width:30%;
-    min-width:250px;   
+    max-width: 22%;
+    /* min-width:250px;    */
 }
 
-.about-us, .sponsors{
-    background-color: #04336f;
+.about-us{
+    background-color: #0f356a;
+    /* height: 300px;   */
+    background-image: url('/images/waves-border.jpg'), url('/images/waves-border-bottom.jpg');
+    background-position: top center, bottom center, center left, center right;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+
+}
+
+/* .about-us-waves {
+    background-image: url('/images/waves-border.jpg');
+    background-position: top center, bottom center, center left, center right;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+} */
+
+footer {
+    background-color: #0f356a;
+    
+    background-image: url('/images/waves-border.jpg');
+    background-position: top center, bottom center, center left, center right;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+}
+  
+.orange-drops {
+    max-width: 24px;
+}
+
+
+.sponsors {
+    background-color: #b2ccdf;
 }
 
 .text-blue {
@@ -80,20 +104,8 @@ justify-content: space-around;
     color: #fc9c4c;
 } */
 
-.btn {
-    background-color: #04336f;
-}
 
-.row-striped:nth-of-type(even){
-    background-color: #efefef;
-    border-left: 4px #d1d1d1 solid;
-  }
-  
-.row-striped:nth-of-type(odd){
-    background-color: #ffffff;
-    border-left: 4px #efefef solid;
-}
-  
+
 .fab, .fa-map-marker-alt, .fa-envelope, .fa, .memb-name {
     color: #EF6539;
 }
@@ -118,7 +130,9 @@ a {
 
 
 .info {
-    background-color: #585858;
+    /* background-color: #585858; */
+    background-color: 	#f15723;
+   height: 35px;
 }
 
 .img {
@@ -127,8 +141,8 @@ a {
 }
 
 .about-img {
-    min-width: 200px;
-    max-width: 500px;
+    /* min-width: 50%; */
+    max-width: 100%;
 }
 
 .text-1 {
@@ -139,12 +153,22 @@ a {
     max-width: 120px;
 }
 
+
 .sponsor-pub {
-    max-width:90px;
+    
+    max-height: 42px;
 }
 
 .card-img-top {
-    max-width: 180px;
+    max-width: 160px;
+}
+
+.container-members, .container-events{
+    margin-top: 60px;
+}
+
+footer {
+    margin-top: 80px;
 }
 
 /* .memb-rol {
@@ -195,9 +219,6 @@ a {
 
 
 
-.btn {
-    color: #005696;
-}
 
 .navbar-nav,
 .mr-auto {
@@ -208,7 +229,7 @@ justify-content: space-around;
 }
 
 .img-logo {
-    width: 140px;
+    width: 145px;
 }
 
 .container {
@@ -235,35 +256,51 @@ justify-content: space-around;
     background-color: #EF6539;
 }
 
-.container-form {
-    max-width: 700px;
-}
 
 
-.drawing {
-    max-width:30%;
-    min-width:250px;
-    
-}
 
-/* .about-us {
-    background-color: #387ca4;
-} */
-
-.btn {
+.btn-details {
     background-color: #04336f;
 }
 
-.row-striped:nth-of-type(even){
-    background-color: #efefef;
-    border-left: 4px #d1d1d1 solid;
-  }
-  
-.row-striped:nth-of-type(odd){
-    background-color: #ffffff;
-    border-left: 4px #efefef solid;
+
+.row-title-dark, .row-button-dark, .about-us-dark, .membership-dark {
+    background-color: #b2ccdf;
 }
-  
+
+.row-title-light, .row-button-light, .about-us-light, .membership-light {
+    background-color:	#e3ecf4;
+}
+
+.about-us-light {
+    background-image: url('/images/wave-light.jpg');
+    background-position: top center, bottom center, center left, center right;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    
+}
+
+.about-us-dark {
+    background-image: url('/images/wave-dark.jpg');
+    background-position: top center, bottom center, center left, center right;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+}
+
+.row-date-light {
+    background-color: #9cbdd6;
+}
+
+.row-date-dark{
+    background-color: #4282b1;
+}
+
+.row-title-active, .row-button-active, .membership-orange-light {
+    background-color: #fcd6c9;
+}
+
+.row-date-active, .membership-orange-dark {
+    background-color: #f47449;
+}
+
 .fab, .fa-map-marker-alt, .fa-envelope, .fa {
     color: #EF6539;
 }
@@ -277,13 +314,14 @@ a {
     font-size: 20px;
 }
 
+ .fa-envelope, .fa-map-marker-alt  {
+    font-size: 20px;
+}
+
 .fa-instagram, .fa-facebook-f {
     font-size: 25px;
 }
 
-.fa-shopping-cart {
-    font-size: 20px;
-}
 
 /* .text-1 {
     background-color: #387ca4;
@@ -291,22 +329,13 @@ a {
 
 
 
-.info {
-    background-color: #585858;
-}
 
 .img {
     max-width: 287px;
     max-height: 230px;
 }
 
-.sponsor-sel{
-    max-width: 120px;
-}
 
-.sponsor-pub {
-    max-width:90px;
-}
 
 
 .carousel-indicators li {
@@ -318,8 +347,40 @@ a {
     bottom: -50px;
 }
 
+.wave{
+    background:
+      linear-gradient(to right, sandybrown, chocolate);
+    height: 50px;
+    position: relative;
+  }
+  .wave::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image:
+      radial-gradient(circle at 10px -5px, transparent 12px, maroon 13px);
+  }
 
 @media(max-width:992px) {
+    nav {
+        border-bottom: 1px solid 	#D3D3D3;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #D3D3D3;
+        background-color:  #F8F8F8 ;
+    }
+}
+
+
+@media(max-width:768px) {
     .container-about {
         display: flex;
         flex-direction: column;
@@ -331,4 +392,42 @@ a {
         order: 2;
     }
 
+    .about-us-text {
+        font-size: 17px;
+    }
+
+   .about-img {
+       max-width: 80%;
+   }
+
+   .events-title {
+       font-size: 17px;
+   }
+
+   .memb-name {
+       font-size: 18px;
+   }
+
+   .footer-text {
+       font-size: 19px;
+   }
+
+   .info {
+       font-size: 15px;
+   }
+
+   .about-us-title {
+       font-size: 22px;
+   }
+
+   .events-schedule, .team-title, .sponsors-title {
+       font-size: 24px;
+   }
+
+   .events-date, .events-year {
+       font-size: 21px;
+   }
+
+  
+    
 }

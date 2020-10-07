@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selwyn Swim Club</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link href="/webfonts/all.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/logodrops.png"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="text-center">
+        <img class="img-logo mt-2 mb-2" src="/images/logo.png" alt="Selwyn">
+    </div>
+    <hr>
+    <div class="container info-container pt-5">
+        <h2>Events: </h2>
+        <table class="table table-striped">
+          <tbody>
+            <% events.forEach(function(event){ %>
+              
+                <tr>
+                  <td class="h5"><%= event.getName() %><br /><%= event.getDateAndYear() %><br /><%= event.getPlace() %></td>
+                  <td class="text-right"><a href="/admin/edit-event/<%= event.id %>" class="btn btn-warning btn-lg active"
+                     role="button">Edit</a></td>
+                  <td class="text-right"><a href="#" class="btn btn-danger btn-lg active"
+                     data-toggle="modal" data-target="#exampleModal<%= event.id %>" role="button">Delete</a></td>    
+                  <div class="modal fade" id="exampleModal<%= event.id %>"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">DELETE CONFIRMATION</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Are you sure you want to delete <%= event.getName() %>?</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                          <a href="/admin/delete-event/<%= event.id %>" class="btn btn-danger" role="button">Yes, delete</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+              <% }) %>
+              
+           
+          </tbody>
+        </table>
+        <a href="/admin/add-event" class="btn btn-light btn-lg active mt-4" role="button">Add new event</a><br />
+    </div>
+</body>
