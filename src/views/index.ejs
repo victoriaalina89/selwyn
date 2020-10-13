@@ -33,9 +33,9 @@
           <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/">Home</a>
           <a class="nav-item nav-link text-uppercase" href="/about-us">About Us</a>
           <a class="nav-item nav-link text-uppercase" href="#events">Events</a>
-          <a class="nav-item nav-link text-uppercase" href="#">News</a>
+          <!-- <a class="nav-item nav-link text-uppercase" href="#">News</a> -->
           <a class="nav-item nav-link text-uppercase" href="/club-info">Club Info</a>
-          <a class="nav-item nav-link text-uppercase" href="#">Gallery</a>
+          <a class="nav-item nav-link text-uppercase" href="/gallery">Gallery</a>
           <a class="nav-item nav-link text-uppercase" href="#">Contact Us</a>
         </div>
       </div>
@@ -75,7 +75,7 @@
       <!-- <div class="text-center d-none d-md-block">
       <img class="drawing text-center mt-4" src="/images/drawing.png">
       </div> -->
-      <div class="text-center mt-4">
+      <div class="text-center mt-5">
         <img class="white-drops mr-2" src="/images/Gotitas comillas-blancas.png">
       <a class="btn-memb btn text-white" data-toggle="modal" data-target="#exampleModal"><h1 class="font-weight-bold"> Become a member</h1></a>
       </div>
@@ -96,54 +96,56 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title ml-3" id="exampleModalLabel">Become a Member</h5>
+          <h4 class="modal-title ml-3 font-weight-bold text-blue" id="exampleModalLabel">Become a Member</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <div class="row pr-2 pl-2">
-            <div class="col-6">
-            <div class="membership-light p-3 mb-4">
-              <h1 class="h5 mb-3"><img class="orange-drops mr-2" src="/images/image (1).png">Club Swimmer</h1>
+            <div class="col-lg-6 col-12">
+            <div class="membership-light mb-4">
+              <h1 class="h5 row-date-dark p-3 text-white font-weight-bold"><img class="white-drops-sm mr-2" src="/images/Gotitas comillas-blancas.png">Club Swimmer</h1>
               
-                <p>This includes club level membership to SNZ and SCWC allowing a swimmer to enter club swim meets anywhere in New Zealand.
+                <p class="p-3">This includes club level membership to SNZ and SCWC allowing a swimmer to enter club swim meets anywhere in New Zealand.
                 A Club Swimmer can upgrade their membership any time to become a Competitive Swimmer but must pay the additional affiliation
                   fees to SNZ and SCWC.</p>
             </div>
-            <div class="membership-orange-light p-3">
-              <h1 class="h5 mb-3"><img class="orange-drops mr-2" src="/images/image (1).png">Competitive Swimmer</h1>
+            <div class="membership-orange-light">
+              <h1 class="h5 row-date-active p-3 text-white font-weight-bold"><img class="white-drops-sm mr-2" src="/images/Gotitas comillas-blancas.png">Competitive Swimmer</h1>
               
-              <p>This includes membership to SNZ and SCWC for regional and national level meets.
+              <p class="p-3">This includes membership to SNZ and SCWC for regional and national level meets.
               This will normally occur when Club Swimmer reaches Canterbury Champs qualification standards.</p>
             </div>
           
             </div>
-             <div class="col-6 p-0">
+             <div class="col-lg-6 p-0 d-none d-lg-block">
               <img class="container membership-img" src="/images/swimer-text-sm.jpg">
             </div>
           </div>
-              <div class="mt-3 text-center">
-                Membership fees are annual. The year starts and finishes in July.<br />	
-                Fees for 2019/2020 are:<br />
-                Club Swimmer Membership $155.25 <br />
-                Competitive  Swimmer Membership  	$241 <br />
-                  
-                This excludes coaching fees and pool entry. Coaching fees are issued monthly for Gold and Platinum Squads, termly for the
-                  Silver and Bronze Squads. These fees are payable to Selwyn Aquatic Centre.</p>
+            <div class="mt-2 text-center">
+              
+              <div class="about-us text-white p-4">
+              <p class="h5 font-weight-bold mt-4">Fees for 2019/2020 are:</p>
+              <p class="h5 font-weight-bold">Club Swimmer Membership $155.25* <br />
+              Competitive Swimmer Membership	$241*</p>
+              <div><a href="https://docs.google.com/forms/d/1BxxszXpAmsUjOy44Uf2sqvHcG6yxjtP2eDB740tCj1M/viewform?gxids=7628&edit_requested=true"
+              target="_blank" role="button" class="btn-memb btn text-white" ><h5 class="font-weight-bold border p-2"> Join Us Here</h5></a></div>
+
               </div>
+              <p class="mt-3">Membership fees are annual. The year starts and finishes in July.</p>	
+              <p class="mt-2">*This excludes coaching fees and pool entry. Coaching fees are issued monthly for Gold and Platinum Squads, termly for the
+                Silver and Bronze Squads. These fees are payable to Selwyn Aquatic Centre.</p>
             </div>
-        
-        
-        <div class="modal-footer">
-          <a href="https://docs.google.com/forms/d/1BxxszXpAmsUjOy44Uf2sqvHcG6yxjtP2eDB740tCj1M/viewform?gxids=7628&edit_requested=true"
-           target="_blank" class="btn btn-info" role="button"> Fill Membership Form</a>
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
+          </div>
         </div>
       </div>
-    </div>
-  </div> 
+  </div>
   <div name="events" id="events" class="container container-events pl-md-0 pr-md-0 pl-4 pr-4">
+    <div>
     <div>
       <h1 class="h3 text-blue font-weight-bold mb-4 events-schedule">Events schedule</h1>
     </div>
@@ -202,82 +204,7 @@
           </div>
         </div>
     <% }) %>
-    
-    <!-- <div class="row mb-4 mb-md-2">
-      <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-active text-white">
-        <div class="pl-3">
-        <h1 class="h4 events-date font-weight-bold"><span >16 JAN</span></h1>
-        <h2 class="h3 events-year font-weight-bold">2021</h2>
-        </div>
-      </div>
-      <div class="col-md-8 p-md-4 p-2 row-title-active">
-        <h1 class="h5 events-title font-weight-bold mt-2 mt-md-0">New Zealand Open Water Swimming Championships</h1>
-        <span class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Taupo, New Zealand</span>
-      </div>
-      <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 p-3 row-button-active">
-        <a href="https://swimming.org.nz/event.php?friendly_id=2021nzopenwater-event" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-      </div>
     </div>
-    <div class="row mb-4 mb-md-2">
-      <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2  row-date-light text-white">
-        <div class="pl-3">
-        <h1 class="h4 font-weight-bold events-date"><span>05 APR</span></h1>
-        <h2 class="h3 font-weight-bold events-year">2021</h2>
-        </div>
-      </div>
-      <div class="col-md-8 p-md-4 p-2  row-title-light">
-        <h1 class="h5 font-weight-bold events-title mt-2 mt-md-0">Aon New Zealand Swimming Championships</h1>
-        <span class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Auckland, New Zealand</span>
-      </div>
-      <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 p-2 row-button-light">
-        <a href="https://swimming.org.nz/event.php?friendly_id=2021-aon-nz-champs-event" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-      </div>
-    </div>
-    <div class="row mb-4 mb-md-2">
-      <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-dark text-white">
-        <div class="pl-3">
-        <h1 class="h4 font-weight-bold events-date"><span>19 APR</span></h1>
-        <h2 class="h3 font-weight-bold events-year">2021</h2>
-        </div>
-      </div>
-      <div class="col-md-8 p-md-4 p-2 row-title-dark">
-        <h1 class="h5 font-weight-bold events-title mt-2 mt-md-0">Aon New Zealand Age Group Swimming Championships</h1>
-        <span class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Wellington, New Zealand</span>
-      </div>
-      <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 p-2 row-button-dark">
-        <a href="https://swimming.org.nz/event.php?friendly_id=2021-aon-nags-event" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-      </div>
-    </div>
-    <div class="row mb-4 mb-md-2">
-      <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-light text-white">
-        <div class="pl-3">
-        <h1 class="h4 font-weight-bold events-date"><span>09 MAY</span></h1>
-        <h2 class="h3 font-weight-bold events-year">2021</h2>
-        </div>
-      </div>
-      <div class="col-md-8 p-md-4 p-2 row-title-light">
-        <h1 class="h5 font-weight-bold events-title mt-2 mt-md-0">New Zealand Division II Swimming Championships</h1>
-        <span class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Dunedin, New Zealand</span>
-      </div>
-      <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 p-2 row-button-light">
-        <a href="https://swimming.org.nz/event.php?friendly_id=2021-div-ii-event" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-      </div>
-    </div>
-    <div class="row mb-4 mb-md-2">
-      <div class="col-md-2 d-md-flex d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-dark text-white">
-        <div class="pl-3">
-        <h1 class="h4 font-weight-bold events-date">17 AUG</h1>
-        <h2 class="h3 font-weight-bold events-year">2021</h2>
-        </div>
-      </div>
-      <div class="col-md-8  p-md-4 p-2 row-title-dark">
-        <h1 class="h5 font-weight-bold events-title mt-2 mt-md-0">New Zealand Short Course Swimming Championships</h1>
-        <span class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Auckland, New Zealand</span>
-      </div>
-      <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 p-2 row-button-dark">
-        <a href="https://swimming.org.nz/event.php?friendly_id=2021-nz-short-course-event" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-      </div>
-    </div> -->
   </div>
 
   <footer class=" page-footer font-small teal pt-5">

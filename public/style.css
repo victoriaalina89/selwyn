@@ -68,11 +68,18 @@ justify-content: space-around;
 
 }
 
-/* .about-us-waves {
-    background-image: url('/images/waves-border.jpg');
-    background-position: top center, bottom center, center left, center right;
-    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-} */
+  
+.gallery img { 
+    width: 210px; 
+    height: 160px; 
+    transition: 1s; 
+    /* padding: 5px;  */
+} 
+  
+.gallery img:hover { 
+    filter: drop-shadow(4px 4px 6px gray); 
+    transform: scale(1.1); 
+} 
 
 footer {
     background-color: #0f356a;
@@ -84,6 +91,10 @@ footer {
   
 .orange-drops {
     max-width: 24px;
+}
+
+.white-drops-sm {
+    max-width: 20px;
 }
 
 .white-drops {
@@ -110,6 +121,10 @@ footer {
 /* .sponsors-title {
     color: #fc9c4c;
 } */
+
+.squads-title {
+    margin-top: 65px;
+}
 
 
 
