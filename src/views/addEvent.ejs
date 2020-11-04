@@ -27,7 +27,7 @@
                 <div class=row>
                     <div class="col-4">
                         <label for="exampleFormControlSelect1">Day</label>
-                        <select class="form-control" name="day" id="exampleFormControlSelect1">
+                        <select class="form-control" name="day" id="exampleFormControlSelect1" required>
                             <option>01</option>
                             <option>02</option>
                             <option>03</option>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-4">
                         <label for="exampleFormControlSelect1">Month</label>
-                        <select class="form-control" name="month" id="exampleFormControlSelect1">
+                        <select class="form-control" name="month" id="exampleFormControlSelect1" required>
                             <option>JAN</option>
                             <option>FEB</option>
                             <option>MAR</option>
@@ -80,22 +80,22 @@
                     </div>
                     <div class="col-4">
                         <label for="exampleFormControlInput1">Year</label>
-                        <input type="text" minlength="4" maxlength="4" name="year" class="form-control" id="exampleFormControlInput1" placeholder="0000">
+                        <input type="text" minlength="4" maxlength="4" name="year" class="form-control" id="exampleFormControlInput1" placeholder="0000" required>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col-6">
                         <label for="exampleFormControlInput1">Event's name</label>
-                        <input type="text" class="form-control" name="name" id="exampleFormControlInput1">
+                        <input type="text" class="form-control" name="name" id="exampleFormControlInput1" required>
                     </div>
                     <div class="col-6">
                         <label for="exampleFormControlInput1">Place</label>
-                        <input type="text" class="form-control" name="place" id="exampleFormControlInput1" placeholder="City, Country">
+                        <input type="text" class="form-control" name="place" id="exampleFormControlInput1" placeholder="City, Country" required>
                     </div>
                 </div>
                 <div class="mt-4">
                     <label for="exampleFormControlInput1">url</label>
-                    <input type="text" class="form-control" name="url" id="exampleFormControlInput1" value="https://www.">
+                    <input type="text" class="form-control" name="url" id="exampleFormControlInput1" value="https://www." required>
                 </div>
                 
                 <button type="submit" class="btn btn-primary mt-4">Submit</button>

@@ -10,6 +10,16 @@ app.use(bodyParser.json());
 
 require('dotenv').config();
 
+// const SibApiV3Sdk = require('sib-api-v3-sdk');
+// const defaultClient = SibApiV3Sdk.ApiClient.instance
+// const apiAuth = defaultClient.authentications['api-key'];
+// apiAuth.apiKey = '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';
+// var partnerKey = defaultClient.authentications['partner-key'];
+// partnerKey.apiKey = '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';
+
+const axios = require("axios");
+// const API_KEY = "8130578a899e3745bfaa551f837883119f685ae3e27e5b16ebd60c8cc8601f99";
+
 const serveStatic = require ('serve-static');
 const basicAuth = require('express-basic-auth');
 
@@ -22,7 +32,8 @@ const upload = multer();
 
 const Event = require('../Event');
 const session = require('express-session');
-const { request } = require('express');
+const { request, response } = require('express');
+
 
 
 //settings
@@ -39,7 +50,9 @@ app.use(basicAuth({
 }));
 
 
-app.use(session({secret: 'selwyn2016',saveUninitialized: true,resave: true}));
+app.use(session({secret: process.env.SELWYN_SESSION_SECRET, saveUninitialized: true, resave: true,  cookie: {
+    expires: 300000
+}}));
 
 const sessionChecker = (request, response, next) => {
     if (request.session.admin) {
@@ -70,9 +83,44 @@ app.get("/", async (require, response) => {
         return event.deleted === false;
     });
 
+    const firstEvents = [];
+    
+    
+    eventsNotDeleted.forEach((event, index) => {
+       if(index < 5) {
+           firstEvents.push(event)
+       }
+    });
 
-    response.render("index.ejs", {events: eventsNotDeleted});
+    
+    response.render("index.ejs", {events: firstEvents});
 });
+
+app.get('/events', async (request, response) => {
+
+    const connection = await getDBConnection();
+
+    const [rows, fields] = await connection.query('SELECT * from events');
+
+    const events = rows.map(event => {
+        const newEvent = new Event(event.id, event.day, event.month, event.year, event.name, event.place, event.url);
+
+        if(event.deleted) {
+            newEvent.markAsDeleted();
+        }
+
+        return newEvent;
+    })
+
+    const eventsNotDeleted = events.filter (event => {
+        return event.deleted === false;
+    })
+
+    console.log(eventsNotDeleted);
+
+    response.render('events.ejs', {events: eventsNotDeleted});
+})
+
 
 app.get("/about-us", (require, response) => {
     response.render("aboutUs.ejs");
@@ -91,14 +139,12 @@ app.post('/admin/login', urlencodedParser, (request,response) => {
         request.session.admin = true;
        
         response.redirect('/admin/events-list');
-        var hour = 300000;
-        request.session.cookie.expires = new Date(Date.now() + hour)
-        request.session.cookie.maxAge = hour
-        } else {
-        response.redirect('/');
-        }
-    
-    
+        // var hour = 60000;
+        // request.session.cookie.expires = new Date(Date.now() + hour)
+        // request.session.cookie.maxAge = hour
+    } else {
+    response.redirect('/admin/login');
+    }  
     
 })
 
@@ -151,7 +197,6 @@ app.post('/admin/add-event', upload.none(), async (request, response) => {
     await connection.query('INSERT INTO events (deleted, day, month, year, name, place, url) VALUES(false, ?, ?, ?, ?, ?, ?)', 
     [request.body.day, request.body.month, request.body.year, request.body.name, request.body.place, request.body.url]);
 
-    console.log(request.body.place);
 
     response.redirect('/admin/events-list');
 })
@@ -177,13 +222,7 @@ app.get('/admin/edit-event/:id', sessionChecker, async (request,response) => {
 
     request.params.id;
 
-    const connection = await mysql.createConnection({
-        host: process.env.SELWYN_DB_HOST,
-        port: process.env.SELWYN_DB_PORT,
-        user: process.env.SELWYN_DB_USER,
-        password: process.env.SELWYN_DB_PASS,
-        database: process.env.SELWYN_DB_DATABASE
-    });
+    const connection = await getDBConnection();
 
     const [rows, fields] = await connection.query('SELECT * from events WHERE id = ?', [request.params.id]);
 
@@ -244,6 +283,59 @@ app.get('/club-info', (request, response) => {
 app.get('/gallery', (request, response) => {
     response.render('gallery.ejs');
 })
+
+app.get('/contact-us', (request, response) => {
+    response.render('contactForm.ejs')
+})
+
+app.post('/contact-us', upload.none(), async (request, response) => {
+
+    console.log(request.body);
+    const output =`
+    <p>You have a new message</p>
+    <h3>contact details</h3>
+    <ul>
+    <li>Name: ${request.body.name}</li>
+    <li>Phone: ${request.body.phone}</li>
+    <li>Email: ${request.body.email}</li>
+    </ul>
+    <h3>Message</h3>
+    <p>Subject: ${request.body.subject}</p>
+    <p> ${request.body.message}</p>
+    `
+    
+    axios({
+        method: 'post',
+        url: 'https://api.sendinblue.com/v3/smtp/email',
+        headers: {
+            'api-key': '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'
+           },
+        data: {  
+            "sender":{  
+               "name":"Contact Form",
+               "email":"victoriaalina89@gmail.com"
+            },
+            "to":[  
+               {  
+                  "email":"victoria@bartak.me",
+                  "name":"Selwyn"
+               }
+            ],
+            "subject":"New message - Contact Form",
+            "htmlContent": output
+         }
+      });
+
+    response.render('formSubmited.ejs',
+    { name: request.body.name,
+    phone: request.body.phone,
+    subject: request.body.subject,
+    email: request.body.email, 
+    message: request.body.message});
+
+
+});
+
 
 
 app.listen(process.env.SELWYN_WEB_PORT);
