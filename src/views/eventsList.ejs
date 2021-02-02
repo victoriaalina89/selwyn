@@ -18,10 +18,14 @@
 </head>
 <body>
     <div class="text-center">
-        <img class="img-logo mt-2 mb-2" src="/images/logo.png" alt="Selwyn">
+      <a href="/"><img class="img-logo mt-2 mb-2" src="/images/logo.png" alt="Selwyn"></a>
     </div>
     <hr>
+
     <div class="container info-container pt-5">
+      <div class="d-flex justify-content-end">
+        <a href="/logout" class="btn btn-light btn-lg active mb-4" role="button">Logout</a><br />
+      </div>
         <h2>Events: </h2>
         <table class="table table-striped">
           <tbody>
@@ -58,6 +62,6 @@
            
           </tbody>
         </table>
-        <a href="/admin/add-event" class="btn btn-light btn-lg active mt-4" role="button">Add new event</a><br />
+        <a href="/admin/add-event" class="btn btn-light btn-lg active mt-4 mb-4" role="button">Add new event</a><br />
     </div>
 </body>
