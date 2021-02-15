@@ -1,9 +1,9 @@
 const sessionChecker = (request, response, next) => {
-    if (request.session.admin) {
-        next();
-    } else {
-        response.redirect('/');
-    }    
+    if (request.isAuthenticated())
+       return next();
+   
+    response.redirect('/');
+      
 };
 
 module.exports = sessionChecker;

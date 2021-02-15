@@ -166,9 +166,8 @@
       <% if(index === 0) { %>
         <div class="row mb-4 mb-md-2">
           <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-active text-white">
-            <div class="pl-md-4 pl-0">
+            <div>
             <h1 class="h4 events-date font-weight-bold mt-2"><span ><%= event.getDate() %></span></h1>
-            <h2 class="h4 events-year font-weight-bold"><%= event.getYear() %></h2>
             </div>
           </div>
           <div class="col-md-8 p-md-4 p-2 row-title-active">
@@ -185,9 +184,8 @@
       <% if (index % 2 === 0) { %>
         <div class="row mb-4 mb-md-2">
           <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-dark text-white">
-            <div class="pl-md-4 pl-0">
-            <h1 class="h4 font-weight-bold events-date mt-2"><span><%= event.getDate() %></span></h1>
-            <h2 class="h4 font-weight-bold events-year"><%= event.getYear() %></h2>
+            <div>
+              <h1 class="h4 font-weight-bold events-date mt-2"><span><%= event.getDate() %></span></h1>
             </div>
           </div>
           <div class="col-md-8 p-md-4 p-2 row-title-dark">
@@ -203,9 +201,8 @@
         <% } %>
         <div class="row mb-4 mb-md-2">
           <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2  row-date-light text-white">
-            <div class="pl-md-4 pl-0">
+            <div>
             <h1 class="h4 font-weight-bold events-date mt-2"><span><%= event.getDate() %></span></h1>
-            <h2 class="h4 font-weight-bold events-year"><%= event.getYear() %></h2>
             </div>
           </div>
           <div class="col-md-8 p-md-4 p-2 row-title-light">

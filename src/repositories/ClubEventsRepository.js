@@ -5,7 +5,8 @@ const clubEventsrepository = {
 
     async getAllEvents(limit) {
         const connection = await connectionDB.getDBConnection();
-        let query = 'SELECT * FROM events WHERE deleted = false ORDER BY id ASC';
+       
+        let query = "SELECT * FROM events WHERE deleted = false ORDER BY date ASC";
 
         if (limit) {
             query += ` LIMIT ${limit}`;
@@ -16,13 +17,13 @@ const clubEventsrepository = {
         return rows;
     },
 
-    async createEvent(day, month, year, name, place, url) {
+    async createEvent(date, name, place, url) {
         const connection = await connectionDB.getDBConnection();
 
-        let query = 'INSERT INTO events (deleted, day, month, year, name, place, url) VALUES(false, ?, ?, ?, ?, ?, ?)';
+        let query = 'INSERT INTO events (deleted, date, name, place, url) VALUES(false, ?, ?, ?, ?)';
 
         await connection.query(query, 
-        [day, month, year, name, place, url]);
+        [date, name, place, url]);
         
     },
 
@@ -45,25 +46,25 @@ const clubEventsrepository = {
         return rows;
     },
 
-    async updateEvent(id, day, month, year, name, place, url){
+    async updateEvent(id, date, name, place, url){
         const connection = await connectionDB.getDBConnection();
 
         const clubEvent = new ClubEvent(
             id,
-            day,
-            month,
-            year,
+            date,
             name,
             place,
             url
         );
 
-        let query = 'UPDATE events SET day = ?, month = ?, year = ?, name = ?, place = ?, url = ?  WHERE id = ?';
+        let query = 'UPDATE events SET date = ?, name = ?, place = ?, url = ?  WHERE id = ?';
     
         await connection.query(query, 
-        [clubEvent.getDay(), clubEvent.getMonth(), clubEvent.getYear(), clubEvent.getName(), clubEvent.getPlace(), clubEvent.getUrl(), id]);
+        [clubEvent.getDate(), clubEvent.getName(), clubEvent.getPlace(), clubEvent.getUrl(), id]);
         
-    }
+    },
+
 }
+
 
 module.exports = clubEventsrepository;

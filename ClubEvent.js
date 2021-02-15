@@ -1,18 +1,11 @@
 class ClubEvent {
-  constructor(id, day, month, year, name, place, url) {
+  constructor(id, date, name, place, url) {
       this.id = id,
-      /* this.deleted = false, */
-      this.day = day,
-      this.month = month,
-      this.year = year,
+      this.date = date,
       this.name = name,
       this.place = place,
       this.url = url
   }
-
-  /* markAsDeleted() {
-      this.deleted = true;
-  } */
 
   getId() {
       return this.id;
@@ -26,24 +19,8 @@ class ClubEvent {
       return this.place;
   }
 
-  getDay() {
-    return this.day;
-  }
-
-  getMonth() {
-      return this.month;
-  }
-
-  getYear() {
-    return this.year;
-}
-
-  getDateAndYear() {
-      return this.day + " " + this.month + " " + this.year;
-  }
-
   getDate() {
-      return this.day + " " + this.month;
+      return this.date;
   }
 
   getUrl() {

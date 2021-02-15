@@ -2,6 +2,7 @@
 const ClubEvent = require('../../ClubEvent');
 const clubEventsRepository = require('../repositories/ClubEventsRepository');
 
+
 const clubEventsService = {
 
     async getUpcomingEvents(limit) {
@@ -9,7 +10,11 @@ const clubEventsService = {
         let rows = await clubEventsRepository.getAllEvents(limit);
 
         const clubEvents = rows.map (row => {
-            const clubEvent = new ClubEvent(row.id, row.day, row.month, row.year, row.name, row.place, row.url);
+
+            const formattedDate = formattedClubDate(row.date);
+
+
+            const clubEvent = new ClubEvent(row.id, formattedDate, row.name, row.place, row.url);
 
             return clubEvent;
         })
@@ -17,9 +22,9 @@ const clubEventsService = {
         return clubEvents;
     },
 
-    async addClubEvent(day, month, year, name, place, url) {
+    async addClubEvent(date, name, place, url) {
 
-        await clubEventsRepository.createEvent(day, month, year, name, place, url);
+        await clubEventsRepository.createEvent(date, name, place, url);
 
     },
 
@@ -33,16 +38,30 @@ const clubEventsService = {
 
         let rows = await clubEventsRepository.selectEventWhereId(id);
 
-        return new ClubEvent(id, rows[0].day, rows[0].month, rows[0].year, rows[0].name, rows[0].place, rows[0].url);
+        const formattedDate = formattedClubDate(rows[0].date);
+
+        return new ClubEvent(id, formattedDate, rows[0].name, rows[0].place, rows[0].url);
     },
 
-    async editClubEvent(id, day, month, year, name, place, url) {
+    async editClubEvent(id, date, name, place, url) {
 
-        await clubEventsRepository.updateEvent(id, day, month, year, name, place, url);
+        await clubEventsRepository.updateEvent(id, date, name, place, url);
 
     }
-
     
 };
+
+function formattedClubDate(clubEventDate) {
+
+    const date = new Date(clubEventDate);
+    const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+    const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
+    const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
+    const  formattedDate = `${day} ${month} ${year}`;
+
+
+    return formattedDate;
+}
+
 
 module.exports = clubEventsService;

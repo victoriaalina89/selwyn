@@ -24,7 +24,7 @@ const clubEventsController = {
     
     async addClubEvent(request, response) {
 
-        await clubEventsService.addClubEvent(request.body.day, request.body.month, request.body.year, request.body.name, request.body.place, request.body.url);
+        await clubEventsService.addClubEvent(request.body.date, request.body.name, request.body.place, request.body.url);
     
         response.redirect('/admin/events-list');
     },
@@ -41,12 +41,12 @@ const clubEventsController = {
 
         const clubEvent = await clubEventsService.getClubEvent(request.params.id);
 
-        response.render('editEvent.ejs', {eventId: clubEvent.getId(), eventDay: clubEvent.getDay(), eventMonth: clubEvent.getMonth(), eventYear: clubEvent.getYear(),eventName: clubEvent.getName(), eventPlace: clubEvent.getPlace(), eventUrl: clubEvent.getUrl() });
+        response.render('editEvent.ejs', {eventId: clubEvent.getId(), eventDate: clubEvent.getDate(), eventName: clubEvent.getName(), eventPlace: clubEvent.getPlace(), eventUrl: clubEvent.getUrl() });
     },
 
     async editClubEvent(request, response) {
 
-        await clubEventsService.editClubEvent(request.params.id, request.body.day, request.body.month, request.body.year, request.body.name, request.body.place, request.body.url);
+        await clubEventsService.editClubEvent(request.params.id, request.body.date, request.body.name, request.body.place, request.body.url);
 
         response.redirect('/admin/events-list');
 

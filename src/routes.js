@@ -12,6 +12,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const multer = require('multer');
 const multerUploadingFiles = multer();
 const sessionChecker = require('./sessionChecker');
+const passport = require('passport');
 
 
 
@@ -24,7 +25,7 @@ function loadRoutes(expressApp) {
     expressApp.get("/events", clubEventsController.displayEvents);
     expressApp.get("/about-us", aboutUsController.displayAboutUs);
     expressApp.get("/admin/login", adminLoginController.displayAdminLogin);
-    expressApp.post("/admin/login", urlencodedParser, adminLoginController.postAdminLogin);
+    expressApp.post("/admin/login", passport.authenticate('local', {successRedirect:'/admin/events-list', failureRedirect: '/admin/login'}));
     expressApp.get("/logout", logoutController.displayLogout);
     expressApp.get("/admin/events-list", sessionChecker, clubEventsController.displayAdminEvents);
     expressApp.get("/admin/add-event", sessionChecker, clubEventsController.displayAddEvent);

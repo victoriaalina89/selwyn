@@ -25,67 +25,7 @@
         <h1 class="h4 mb-5">Edit <%= eventName %></h1>
         <form action="/admin/edit-event/<%= eventId %>" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <div class=row>
-                    <div class="col-4">
-                        <label for="exampleFormControlSelect1">Day</label>
-                        <select class="form-control" name="day" id="exampleFormControlSelect1">
-                            <option class="bg-warning"><%= eventDay %></option>
-                            <option>01</option>
-                            <option>02</option>
-                            <option>03</option>
-                            <option>04</option>
-                            <option>05</option>
-                            <option>06</option>
-                            <option>07</option>
-                            <option>08</option>
-                            <option>09</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                            <option>13</option>
-                            <option>14</option>
-                            <option>15</option>
-                            <option>16</option>
-                            <option>17</option>
-                            <option>18</option>
-                            <option>19</option>
-                            <option>20</option>
-                            <option>21</option>
-                            <option>22</option>
-                            <option>23</option>
-                            <option>24</option>
-                            <option>25</option>
-                            <option>26</option>
-                            <option>27</option>
-                            <option>28</option>
-                            <option>29</option>
-                            <option>30</option>
-                            <option>31</option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <label for="exampleFormControlSelect1">Month</label>
-                        <select class="form-control" name="month" id="exampleFormControlSelect1">
-                            <option class="bg-warning"><%= eventMonth %></option>
-                            <option>JAN</option>
-                            <option>FEB</option>
-                            <option>MAR</option>
-                            <option>APR</option>
-                            <option>MAY</option>
-                            <option>JUN</option>
-                            <option>JUL</option>
-                            <option>AUG</option>
-                            <option>SEP</option>
-                            <option>OCT</option>
-                            <option>NOV</option>
-                            <option>DEC</option>
-                        </select>
-                    </div>
-                    <div class="col-4">
-                        <label for="exampleFormControlInput1">Year</label>
-                        <input type="text" minlength="4" maxlength="4" value="<%= eventYear %>" name="year" class="form-control" id="exampleFormControlInput1" placeholder="0000">
-                    </div>
-                </div>
+              
                 <div class="row mt-4">
                     <div class="col-6">
                         <label for="exampleFormControlInput1">Event's name</label>
@@ -96,14 +36,18 @@
                         <input type="text" class="form-control" value="<%= eventPlace %>" name="place" id="exampleFormControlInput1" placeholder="City, Country">
                     </div>
                 </div>
-                <div class="mt-4">
-                    <label for="exampleFormControlInput1">url</label>
-                    <input type="text" class="form-control" value="<%= eventUrl %>" name="url" id="exampleFormControlInput1" >
+                <div class=row>
+                    <div class="col-4 mt-4">
+                        <label for="exampleFormControlInput1">Date</label>
+                        <input placeholder="<%= eventDate %>" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" id="exampleFormControlInput1" name="date">
+                    </div>
+                    <div class="col-8 mt-4">
+                        <label for="exampleFormControlInput1">url</label>
+                        <input type="text" class="form-control" value="<%= eventUrl %>" name="url" id="exampleFormControlInput1" >
+                    </div>
                 </div>
-                
-                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                <button type="submit" class="btn btn-primary mt-5">Submit</button>
             </div>
         </form>
     </div>
-
 </body>

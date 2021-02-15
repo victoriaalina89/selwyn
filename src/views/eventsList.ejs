@@ -32,7 +32,7 @@
             <% events.forEach(function(event){ %>
               
                 <tr>
-                  <td class="h5"><%= event.getName() %><br /><%= event.getDateAndYear() %><br /><%= event.getPlace() %></td>
+                  <td class="h5"><%= event.getName() %><br /><%= event.getDate() %><br /><%= event.getPlace() %></td>
                   <td class="text-right"><a href="/admin/edit-event/<%= event.id %>" class="btn btn-warning btn-lg active"
                      role="button">Edit</a></td>
                   <td class="text-right"><a href="#" class="btn btn-danger btn-lg active"

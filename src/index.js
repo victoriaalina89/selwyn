@@ -9,13 +9,16 @@ require('dotenv').config();
 
 const serveStatic = require ('serve-static');
 
+const passport = require('passport');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const passportLocal = require('passport-local').Strategy;
 
 const loadRoutes = require('./routes');
-const { response } = require('express');
 
 
 //settings
+app.use(express.urlencoded( {extended: true} ));
 app.use(bodyParser.json());
 
 app.set('views', __dirname + '/views');
@@ -26,24 +29,33 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(serveStatic(__dirname + '/../public'));
 
-// app.use(basicAuth({
-//     users: { 'selwyn': process.env.SELWYN_SESSION_SECRET },
-//     challenge: true,
-// }));
+
+app.use(cookieParser(process.env.SELWYN_SESSION_SECRET));
 
 app.use(session({secret: process.env.SELWYN_SESSION_SECRET, saveUninitialized: true, resave: true,  cookie: {
     expires: 300000
 }}));
 
-/* const sessionChecker = require('./sessionChecker'); */
+app.use(passport.initialize());
+app.use(passport.session());
 
-/* const sessionChecker = (request, response, next) => {
-    if (request.session.admin) {
-        next();
-    } else {
-        response.redirect('/');
-    }    
-}; */
+passport.use(new passportLocal(function(username, password, done){
+    console.log(username);
+    console.log(password);
+    if(username === process.env.SELWYN_LOGIN_USERNAME && password === process.env.SELWYN_LOGIN_PASSWORD) 
+    return done(null, {id: 1, name: 'Admin'});
+
+    done(null, false);
+}))
+
+passport.serializeUser(function(user, done){
+    done(null, user.id);
+})
+
+passport.deserializeUser(function(id, done) {
+    done(null, {id: 1, name: 'Admin'});
+})
+
 
 loadRoutes(app);
 
