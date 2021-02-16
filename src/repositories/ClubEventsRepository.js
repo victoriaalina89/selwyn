@@ -24,6 +24,8 @@ const clubEventsrepository = {
 
         await connection.query(query, 
         [date, name, place, url]);
+
+        console.log(date);
         
     },
 

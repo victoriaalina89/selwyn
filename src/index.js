@@ -33,7 +33,7 @@ app.use(serveStatic(__dirname + '/../public'));
 app.use(cookieParser(process.env.SELWYN_SESSION_SECRET));
 
 app.use(session({secret: process.env.SELWYN_SESSION_SECRET, saveUninitialized: true, resave: true,  cookie: {
-    expires: 300000
+    expires: 800000
 }}));
 
 app.use(passport.initialize());

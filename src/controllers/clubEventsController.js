@@ -47,7 +47,7 @@ const clubEventsController = {
     async editClubEvent(request, response) {
 
         await clubEventsService.editClubEvent(request.params.id, request.body.date, request.body.name, request.body.place, request.body.url);
-
+        
         response.redirect('/admin/events-list');
 
     }

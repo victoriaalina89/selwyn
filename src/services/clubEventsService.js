@@ -38,12 +38,17 @@ const clubEventsService = {
 
         let rows = await clubEventsRepository.selectEventWhereId(id);
 
-        const formattedDate = formattedClubDate(rows[0].date);
+        const date = new Date(rows[0].date);
+        const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+        const month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(date);
+        const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
+        const  formattedDate = `${year}-${month}-${day}`;
 
         return new ClubEvent(id, formattedDate, rows[0].name, rows[0].place, rows[0].url);
     },
 
     async editClubEvent(id, date, name, place, url) {
+
 
         await clubEventsRepository.updateEvent(id, date, name, place, url);
 
