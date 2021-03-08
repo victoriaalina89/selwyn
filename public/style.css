@@ -88,12 +88,20 @@ justify-content: space-around;
 }
   
 .gallery img { 
-    width: 150px; 
-    height: 150px; 
+    width: 250px; 
+    height: 250px; 
     object-fit: cover;
     transition: 1s; 
 } 
   
+.gallery:hover {
+    filter: brightness(80%);
+}
+
+.gallery {
+    transition: .5s ease-in-out;
+}
+
 textarea {
     height: 300px;
 }
