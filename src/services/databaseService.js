@@ -9,7 +9,6 @@ const connectionDB = {
             user: process.env.SELWYN_DB_USER,
             password: process.env.SELWYN_DB_PASS,
             database: process.env.SELWYN_DB_DATABASE,
-            // dateStrings: true
         });
 
         return connection;
