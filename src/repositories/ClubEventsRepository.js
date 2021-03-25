@@ -6,13 +6,15 @@ const clubEventsrepository = {
     async getAllEvents(limit) {
         const connection = await connectionDB.getDBConnection();
        
-        let query = "SELECT * FROM events WHERE deleted = false ORDER BY date ASC";
+        let query = "SELECT * FROM events WHERE deleted = false AND date >= CURDATE() ORDER BY date ASC";
 
         if (limit) {
             query += ` LIMIT ${limit}`;
         }
 
         const [rows, fields] = await connection.query(query);
+
+        connection.end()
 
         return rows;
     },
@@ -25,8 +27,7 @@ const clubEventsrepository = {
         await connection.query(query, 
         [date, name, place, url]);
 
-        console.log(date);
-        
+        connection.end()
     },
 
     async updateEventSetDeletedTrue(id) {
@@ -35,6 +36,8 @@ const clubEventsrepository = {
         let query = 'UPDATE events SET deleted = true WHERE id = ?';
 
         await connection.query(query, [id]);
+
+        connection.end()
         
     },
 
@@ -44,6 +47,8 @@ const clubEventsrepository = {
         let query = 'SELECT * from events WHERE id = ?';
 
         const [rows, fields] = await connection.query(query, [id]);
+
+        connection.end()
         
         return rows;
     },
@@ -63,6 +68,8 @@ const clubEventsrepository = {
     
         await connection.query(query, 
         [clubEvent.getDate(), clubEvent.getName(), clubEvent.getPlace(), clubEvent.getUrl(), id]);
+
+        connection.end()
         
     },
 
