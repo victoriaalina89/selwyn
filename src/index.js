@@ -33,8 +33,8 @@ app.use(cookieParser(process.env.SELWYN_SESSION_SECRET));
 
 app.use(session({secret: process.env.SELWYN_SESSION_SECRET, saveUninitialized: true, resave: true, 
   cookie: { 
-    expires: new Date(Date.now() + 60 * 10000), 
-    maxAge: 60*10000
+    expires: new Date(Date.now() + 60 * 15000), 
+    maxAge: 60*15000
 }}));
 
 app.use(passport.initialize());

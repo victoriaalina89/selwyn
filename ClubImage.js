@@ -25,7 +25,8 @@ class ClubImage  {
   }
 
   getNameForImage() {
-    return this.name.replace(/[&\/\\#,+()$~%.'":*?!<>{}\s]/g,'');
+    const alphabet = "abcdefghijklmnopqrstuvwxyz"
+    return this.name.replace(/[&\/\\#,+()$~%.'":*?!<>{}\s]/g,'') + Math.floor(Math.random() * 100) + alphabet[Math.floor(Math.random() * alphabet.length)];
   }
 
 }
