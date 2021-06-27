@@ -1,9 +1,9 @@
 # Selwyn Swim Club
 
-Website for a swim club. 
+Responsive Website for a swim club in NZ.
 
-Admin Area, Homepage, Services, Gallery, Contact Form, Events. 
+**Features:** Admin Area, Homepage, Services, Gallery, Contact Form, Events. 
 
-NodeJS 14, Bootstrap
+**Tech stack:** NodeJS 14, Bootstrap, HTML, CSS
 
-https://www.selwynswim.club
+**Website:** https://www.selwynswim.club
