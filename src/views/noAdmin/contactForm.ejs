@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ("partials/head.ejs") %>
+
+<body>
+<%- include ("partials/socialMedia.ejs") %>
+<%- include ("partials/header.ejs", {currentPage:"contact-form"}) %>
+   
+  <div class="container mt-4 mb-5 d-flex justify-content-center">
+    <div class="row">
+      <div class="col-lg-8 col-12">
+        <form action="/contact-us" method="POST" enctype="multipart/form-data">
+            
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="subject" name="name" aria-describedby="emailHelp" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="exampleInputEmail1">Phone</label>
+                <input type="text" class="form-control" id="email" name="phone" aria-describedby="emailHelp" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your phone with anyone else.</small>
+              </div>
+              <div class="col-md-6 form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="col-md-6 form-group">
+                  <label for="exampleInputEmail1">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" aria-describedby="emailHelp">
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Message</label>
+                <textarea class="form-control" id="mesage" placeholder="Type a message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-details text-white">Submit</button>
+        </form>
+      </div>
+      <div class="col-lg-4 col-12 about-us-light text-center p-5 mt-lg-0 mt-4">
+        <div >
+          <p class="mt-3"><i class="fas fa-envelope"></i><a class="mail" href="mailto:selwynswimclub@gmail.com" target="_blank">
+            <span class="text-blue font-weight-bold"> selwynswimclub@gmail.com</span></a></p>
+          <p class="mt-3 mb-4 text-blue font-weight-bold"><i class="fas fa-map-marker-alt mr-1"></i>71 Broadlands Dr, Rolleston 7643</p>
+          <p>To make enquiries about training or the squad program please email our Head Coach:
+            <a class="mail" href="mailto:ben.close@selwyn.govt.nz" target="_blank"><span class="font-weight-bold text-blue">ben.close@selwyn.govt.nz</span></a></p>
+        </div>
+    </div>
+    
+  </div>
+  
+</div>
+  
+  <div class="container d-flex justify-content-center mt-5 mb-5 p-0">
+    <iframe width="1100" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=71%20Broadlands%20Dr%2C%20Rolleston%207643&key=AIzaSyBIV0odj3q04sCYTxkNZ3RmkumBwflDZR4" allowfullscreen></iframe>
+  </div>
+
+<%- include ("partials/footer.ejs") %>
+
+</body>

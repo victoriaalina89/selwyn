@@ -6,25 +6,30 @@ const clubEventsController = {
 
         const allEvents = await clubEventsService.getUpcomingEvents();
         
-        response.render("events.ejs", {events: allEvents});
+        response.render("noAdmin/events.ejs", {events: allEvents, currentPage: "events"});
     },
 
     async displayAdminEvents(request, response) {
 
         const allEvents = await clubEventsService.getUpcomingEvents();
         
-        response.render('eventsList.ejs', {events: allEvents});
+        response.render('admin/events/eventsList.ejs', {events: allEvents});
     },
 
     async displayAddEvent(request, response) {
 
-        response.render('addEvent.ejs')
+        response.render('admin/events/addEvent.ejs')
     },
 
     
     async addClubEvent(request, response) {
 
-        await clubEventsService.addClubEvent(request.body.date, request.body.name, request.body.place, request.body.url);
+        await clubEventsService.addClubEvent(
+          request.body.date,
+          request.body.name,
+          request.body.place,
+          request.body.url
+        );
     
         response.redirect('/admin/events-list');
     },
@@ -41,12 +46,24 @@ const clubEventsController = {
 
         const clubEvent = await clubEventsService.getClubEvent(request.params.id);
 
-        response.render('editEvent.ejs', {eventId: clubEvent.getId(), eventDate: clubEvent.getDate(), eventName: clubEvent.getName(), eventPlace: clubEvent.getPlace(), eventUrl: clubEvent.getUrl() });
+        response.render('admin/events/editEvent.ejs', {
+            eventId: clubEvent.getId(),
+            eventDate: clubEvent.getDate(),
+            eventName: clubEvent.getName(),
+            eventPlace: clubEvent.getPlace(),
+            eventUrl: clubEvent.getUrl()
+        });
     },
 
     async editClubEvent(request, response) {
 
-        await clubEventsService.editClubEvent(request.params.id, request.body.date, request.body.name, request.body.place, request.body.url);
+        await clubEventsService.editClubEvent(
+          request.params.id,
+          request.body.date,
+          request.body.name,
+          request.body.place,
+          request.body.url
+        );
         
         response.redirect('/admin/events-list');
 

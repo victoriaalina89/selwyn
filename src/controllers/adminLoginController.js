@@ -1,11 +1,11 @@
 const adminLoginController = {
     
     async displayAdminLogin(request, response) {
-        response.render("login.ejs");
+        response.render("admin/login.ejs");
     },
 
     async displayEventsImagesButtons(request, response) {
-      response.render("admin.ejs");
+      response.render("admin/admin.ejs");
     }
     
 };

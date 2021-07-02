@@ -4,7 +4,7 @@ const contactUsController = {
 
     async displayContactUs (request, response) {
 
-        response.render('contactForm.ejs');
+        response.render('noAdmin/contactForm.ejs');
 
     },
 
@@ -12,7 +12,7 @@ const contactUsController = {
 
        await contactUsService.sendEmail(request.body.name, request.body.phone, request.body.email, request.body.subject, request.body.message) 
 
-       response.render('formSubmited.ejs',{ 
+       response.render('noAdmin/formSubmited.ejs',{
         name: request.body.name,
         phone: request.body.phone,
         subject: request.body.subject,

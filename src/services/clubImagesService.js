@@ -1,6 +1,6 @@
 
 const clubImagesRepository = require("../repositories/ClubImagesRepository");
-const ClubImage = require('../../ClubImage');
+const ClubImage = require('../classes/ClubImage');
 
 
 const clubImagesService = {

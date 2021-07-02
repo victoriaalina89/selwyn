@@ -1,0 +1,46 @@
+
+<div class="header">
+    <div class="info text-center text-white p-1 text-uppercase shadow-sm font-weight-bold">open with level 1 safety standards</div>
+    <div class="text-center">
+        <a href="/"><img class="img-logo mt-2 mb-2" src="/images/logo.png" alt="Selwyn"></a>
+    </div>
+    <nav class="container navbar navbar-expand-lg navbar-light p-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-lg-5 mr-lg-5" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto">
+                    <%if (currentPage === "home-page") { %>
+                        <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/">Home</a>
+                    <%} else {%>
+                        <a class="nav-item nav-link text-uppercase" href="/">Home</a>
+                    <%}%>
+                    <%if (currentPage === "about-us") { %>
+                        <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/about-us">About Us</a>
+                    <%} else {%>
+                        <a class="nav-item nav-link text-uppercase" href="/about-us">About Us</a>
+                    <%}%>
+                    <%if (currentPage === "events") { %>
+                        <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/events">Events</a>
+                    <%} else {%>
+                        <a class="nav-item nav-link text-uppercase" href="/events">Events</a>
+                    <%}%>
+                    <%if (currentPage === "club-info") { %>
+                        <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/club-info">Club Info</a>
+                    <%} else {%>
+                        <a class="nav-item nav-link text-uppercase" href="/club-info">Club Info</a>
+                    <%}%>
+                    <%if (currentPage === "gallery") { %>
+                        <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/gallery">Gallery</a>
+                     <%} else {%>
+                        <a class="nav-item nav-link text-uppercase" href="/gallery">Gallery</a>
+                     <%}%>
+                     <%if (currentPage === "contact-form") { %>
+                        <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/contact-us">Contact Us</a>
+                     <%} else {%>
+                        <a class="nav-item nav-link text-uppercase" href="/contact-us">Contact Us</a>
+                     <%}%>
+            </div>
+        </div>
+    </nav>
+</div>

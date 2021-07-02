@@ -4,7 +4,6 @@ const aboutUsController = require('./controllers/aboutUsController');
 const adminLoginController = require('./controllers/adminLoginController');
 const logoutController = require('./controllers/logoutController');
 const clubInfoController = require('./controllers/clubInfoController');
-const galleryController = require('./controllers/galleryController');
 const contactUsController = require('./controllers/contactUsController');
 const clubImagesController = require('./controllers/clubImagesController');
 const upload = require('./multer');

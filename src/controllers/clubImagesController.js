@@ -8,7 +8,7 @@ const clubImagesController = {
 
     const clubImages = await clubImagesService.getClubImages();
 
-    response.render('gallery.ejs', {images: clubImages});
+    response.render('noAdmin/gallery.ejs', {images: clubImages});
 
   },
 
@@ -16,20 +16,20 @@ const clubImagesController = {
 
     const clubImages = await clubImagesService.getClubImages();
 
-    response.render('imagesList.ejs', {images: clubImages});
+    response.render('admin/images/imagesList.ejs', {images: clubImages});
 
   },
 
   async displayAddClubImage(request, response) {
 
-    response.render('addImage.ejs');
+    response.render('admin/images/addImage.ejs');
 
   },
 
   async addClubImage(request, response) {
 
     if (request.fileValidationError) {
-      response.render('addImage.ejs', {msg: 'images .jpg | .png | .jpeg only! '});
+      response.render('admin/images/addImage.ejs', {msg: 'images .jpg | .png | .jpeg only! '});
 
       return;
     }

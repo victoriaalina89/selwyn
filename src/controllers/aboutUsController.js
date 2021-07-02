@@ -2,7 +2,7 @@ const aboutUsController = {
 
     async displayAboutUs(request, response) {
         
-        response.render("aboutUs.ejs");
+        response.render("noAdmin/aboutUs.ejs", {currentPage: "about-us"});
     }
 
 };

@@ -1,6 +1,6 @@
 const multer = require('multer');
 const path = require('path');
-const ClubImage = require('../ClubImage');
+const ClubImage = require('./classes/ClubImage');
 
 const storage = multer.diskStorage({
   destination: './public/images',

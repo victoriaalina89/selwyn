@@ -1,5 +1,5 @@
 const connectionDB = require('../services/databaseService');
-const ClubEvent = require('../../ClubEvent');
+const ClubEvent = require('../classes/ClubEvent');
 
 const clubEventsrepository = {
 

@@ -7,34 +7,36 @@
     <title>Selwyn Swim Club</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <link href="/webfonts/all.css" rel="stylesheet">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/logodrops.png"/>
+    <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="text-center">
-        <a href="/"><img class="img-logo mt-2 mb-2" src="/images/logo.png" alt="Selwyn"></a>
-    </div>
-    <hr>
-    <div class="container d-flex justify-content-center">
-        <div class="container-form border">
-        
-            <div class="card-header bg-dark text-white text-center">
-                <h3>Sign in</h3>
-            </div>
-            <div class="card-body">
-                <form action="/admin/login" method="POST">
-                    <input type="text" name="username" class="form-control" placeholder="Username" required><br />
-                    <input type="password" name="password" class="form-control" placeholder="Password" required><br />
-                    <input type="submit" class="btn btn-primary btn-block" value="Log In">
-                </form>
-            </div>
+<%- include ("partials/socialMedia.ejs") %>
+<%- include ("partials/header.ejs", {currentPage:"gallery"}) %>
+
+  <div class="container mt-5">
+    <div class="row text-center text-lg-left">
+      <% images.forEach(function(image){ %>
+        <div class="gallery col-lg-3 col-md-4 col-6">
+          <a href="<%= image.getPath() %>" class="fancybox d-block mb-4 h-100" data-fancybox="gallery1">
+              <img src="<%= image.getPath() %>" class="img-fluid img-thumbnail" alt="Selwyn">
+          </a>
         </div>
+      <% }); %>
     </div>
+  </div>
+
+  <%- include ("partials/footer.ejs") %>
+
 </body>

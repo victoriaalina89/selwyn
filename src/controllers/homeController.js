@@ -6,7 +6,7 @@ const homeController = {
 
         const upcomingEvents = await clubEventsService.getUpcomingEvents(5);
         
-        response.render("index.ejs", {events: upcomingEvents});
+        response.render("noAdmin/index.ejs", {events: upcomingEvents});
     }
 
 };

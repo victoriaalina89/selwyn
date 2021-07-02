@@ -1,5 +1,5 @@
 
-const ClubEvent = require('../../ClubEvent');
+const ClubEvent = require('../classes/ClubEvent');
 const clubEventsRepository = require('../repositories/ClubEventsRepository');
 
 

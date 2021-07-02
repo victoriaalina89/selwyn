@@ -1,10 +1,10 @@
-const clubEventsService = require("../services/clubEventsService")
+
 
 const clubInfoController = {
 
-    async displayClubInfo(requiere, response) {
+    async displayClubInfo(request, response) {
 
-        response.render('clubInfo.ejs');
+        response.render('noAdmin/clubInfo.ejs');
         
     }
 }
