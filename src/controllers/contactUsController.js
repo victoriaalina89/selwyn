@@ -18,7 +18,7 @@ const contactUsController = {
         subject: request.body.subject,
         email: request.body.email, 
         message: request.body.message
-    });
+       });
     }
 }
 
