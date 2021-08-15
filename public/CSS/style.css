@@ -81,7 +81,7 @@ body {
 
 .about-us{
     background-color: #0f356a;
-    background-image: url('/public/images/waves-border.jpg');
+    background-image: url('../images/waves-border.jpg');
     background-position: top center, bottom center, center left, center right;
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
 
@@ -109,7 +109,7 @@ textarea {
 footer {
     background-color: #0f356a;
     margin-top: 80px;
-    background-image: url('/public/images/waves-border.jpg');
+    background-image: url('../images/waves-border.jpg');
     background-position: top center, bottom center, center left, center right;
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
 }
@@ -272,14 +272,14 @@ a {
 }
 
 .about-us-light {
-    background-image: url('/public/images/wave-light.jpg');
+    background-image: url('../images/wave-light.jpg');
     background-position: top center, bottom center, center left, center right;
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
     
 }
 
 .about-us-dark {
-    background-image: url('/public/images/wave-dark.jpg');
+    background-image: url('../images/wave-dark.jpg');
     background-position: top center, bottom center, center left, center right;
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
 }
