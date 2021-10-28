@@ -1,6 +1,7 @@
 const homeController = require('./controllers/homeController');
 const clubEventsController = require('./controllers/clubEventsController');
 const aboutUsController = require('./controllers/aboutUsController');
+const submergeAquaticsController = require('./controllers/submergeAquatics');
 const adminLoginController = require('./controllers/adminLoginController');
 const logoutController = require('./controllers/logoutController');
 const clubInfoController = require('./controllers/clubInfoController');
@@ -25,6 +26,7 @@ function loadRoutes(expressApp) {
     expressApp.get("/", homeController.displayHome);
     expressApp.get("/events", clubEventsController.displayEvents);
     expressApp.get("/about-us", aboutUsController.displayAboutUs);
+    expressApp.get("/submerge-aquatics", submergeAquaticsController.displaySubmergeAquatics);
     expressApp.get("/admin/login", adminLoginController.displayAdminLogin);
     expressApp.post("/admin/login", passport.authenticate('local', {successRedirect:'/admin/events-images', failureRedirect: '/admin/login'}));
     expressApp.get("/admin/events-images", adminLoginController.displayEventsImagesButtons);
