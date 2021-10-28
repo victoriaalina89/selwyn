@@ -6,68 +6,73 @@
 <body>
 <%- include ("partials/socialMedia.ejs") %>
 <%- include ("partials/header.ejs", {currentPage:"events"}) %>
-    
-  </div>
-  <div name="events" id="events" class="container container-events pl-md-0 pr-md-0 pl-4 pr-4 mb-5 mt-5">
-    <div>
-    <div>
-      <h1 class="h3 text-blue font-weight-bold mb-4 events-schedule">Events schedule</h1>
-    </div>
-    <% events.forEach(function(event, index){ %>
-      <% if(index === 0) { %>
-        <div class="row mb-4 mb-md-2">
-          <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-active text-white">
-            <div>
-            <h1 class="h4 events-date font-weight-bold mt-2"><span ><%= event.getDate() %></span></h1>
-            </div>
-          </div>
-          <div class="col-md-8 p-md-4 p-2 row-title-active">
-            <h1 class="h5 events-title font-weight-bold mt-2 mr-1"><%= event.getName() %></h1>
-            <span class="list-inline-item mt-2"><i class="fa fa-location-arrow" aria-hidden="true"></i> <%= event.getPlace() %></span>
-          </div>
-          <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 pb-3 row-button-active">
-            <a href="<%= event.getUrl() %>" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-          </div>
-        </div>
 
-        <% return %>
-      <% } %>
-      <% if (index % 2 === 0) { %>
-        <div class="row mb-4 mb-md-2">
-          <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-dark text-white">
-            <div>
-              <h1 class="h4 font-weight-bold events-date mt-2 mr-1"><span><%= event.getDate() %></span></h1>
-            </div>
-          </div>
-          <div class="col-md-8 p-md-4 p-2 row-title-dark">
-            <h1 class="h5 font-weight-bold events-title mt-2"><%= event.getName() %></h1>
-            <span><i class="fa fa-location-arrow mt-2" aria-hidden="true"></i> <%= event.getPlace() %></span>
-          </div>
-          <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 pb-3 row-button-dark">
-            <a href="<%= event.getUrl() %>" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-          </div>
+</div>
+<div name="events" id="events" class="container container-events pl-md-0 pr-md-0 pl-4 pr-4 mb-5 mt-5">
+    <div>
+        <div>
+            <h1 class="h3 text-blue font-weight-bold mb-4 events-schedule">Events schedule</h1>
         </div>
+        <% events.forEach(function(event, index){ %>
+            <% if(index === 0) { %>
+                <div class="row mb-4 mb-md-2">
+                    <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-active text-white">
+                        <div>
+                            <h1 class="h4 events-date font-weight-bold mt-2"><span><%= event.getDate() %></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-8 p-md-4 p-2 row-title-active">
+                        <h1 class="h5 events-title font-weight-bold mt-2 mr-1"><%= event.getName() %></h1>
+                        <span class="list-inline-item mt-2"><i class="fa fa-location-arrow"
+                                                               aria-hidden="true"></i> <%= event.getPlace() %></span>
+                    </div>
+                    <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 pb-3 row-button-active">
+                        <a href="<%= event.getUrl() %>" target="_blank" class="btn btn-details text-white"
+                           role="button">Details</a>
+                    </div>
+                </div>
 
-        <% return %>
-        <% } %>
-        <div class="row mb-4 mb-md-2">
-          <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-light text-white">
-            <div>
-              <h1 class="h4 font-weight-bold events-date mt-2 mr-1"><span><%= event.getDate() %></span></h1>
+                <% return %>
+            <% } %>
+            <% if (index % 2 === 0) { %>
+                <div class="row mb-4 mb-md-2">
+                    <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-dark text-white">
+                        <div>
+                            <h1 class="h4 font-weight-bold events-date mt-2 mr-1"><span><%= event.getDate() %></span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-8 p-md-4 p-2 row-title-dark">
+                        <h1 class="h5 font-weight-bold events-title mt-2"><%= event.getName() %></h1>
+                        <span><i class="fa fa-location-arrow mt-2"
+                                 aria-hidden="true"></i> <%= event.getPlace() %></span>
+                    </div>
+                    <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 pb-3 row-button-dark">
+                        <a href="<%= event.getUrl() %>" target="_blank" class="btn btn-details text-white"
+                           role="button">Details</a>
+                    </div>
+                </div>
+
+                <% return %>
+            <% } %>
+            <div class="row mb-4 mb-md-2">
+                <div class="col-md-2 d-md-flex align-items-md-center text-center p-md-4 p-2 row-date-light text-white">
+                    <div>
+                        <h1 class="h4 font-weight-bold events-date mt-2 mr-1"><span><%= event.getDate() %></span></h1>
+                    </div>
+                </div>
+                <div class="col-md-8 p-md-4 p-2 row-title-light">
+                    <h1 class="h5 font-weight-bold events-title mt-2"><%= event.getName() %></h1>
+                    <span><i class="fa fa-location-arrow mt-2" aria-hidden="true"></i> <%= event.getPlace() %></span>
+                </div>
+                <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 pb-3 row-button-light">
+                    <a href="<%= event.getUrl() %>" target="_blank" class="btn btn-details text-white" role="button">Details</a>
+                </div>
             </div>
-          </div>
-          <div class="col-md-8 p-md-4 p-2 row-title-light">
-            <h1 class="h5 font-weight-bold events-title mt-2"><%= event.getName() %></h1>
-            <span><i class="fa fa-location-arrow mt-2" aria-hidden="true"></i> <%= event.getPlace() %></span>
-          </div>
-          <div class="text-right col-md-2 d-md-flex align-items-md-center p-md-4 pb-3 row-button-light">
-            <a href="<%= event.getUrl() %>" target="_blank" class="btn btn-details text-white" role="button">Details</a>
-          </div>
-        </div>
-    <% }) %>
+        <% }) %>
     </div>
-   
-  </div>
+
+</div>
 
 <%- include ("partials/footer.ejs") %>
 
