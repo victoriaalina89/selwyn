@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selwyn Swim Club</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="/webfonts/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/logodrops.png"/>
+    <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<%- include ("partials/socialMedia.ejs") %>
+<%- include ("partials/header.ejs", {currentPage:"submerge-aquatics"}) %>
+
+<div>
+    <div class="container">
+        <img class="container membership-img p-0 mt-4" src="/images/SubAqBanner.png">
+    </div>
+    <div class="mt-5 mb-5 p-md-0 p-3 container">
+        <div class="text-center">
+            <p>Submerge Aquatics is the main provider of swim coaching services for all squad level swimmers, including
+                those with competitive or fitness goals. Please note that you do not need to be a member of the Selwyn
+                Swim Club, however we do highly encourage all squad swimmers to consider this option.</p>
+            <p>At the core of our service, Submerge Aquatics deliver high quality daily training sessions, facilitate
+                out-of-water training, actively promote goal setting and mentoring through group and individual
+                sessions,
+                promote and enhance the growth of squad-level swimmers particularly from within the Selwyn Swim School,
+                and provide coaching support at competitions as agreed with Selwyn Swim Club. Submerge Aquatics also
+                wants
+                to raise the profile of swimming in a holistic way.<br>
+                Ben Close is the Head Coach of the programme, and Hannah Bates is the Assistant Coach.
+                There are also several casual coaches that cover shifts as needed.
+                All coaches are members of the New Zealand Swim Coaches and Teachers Association (NZSCTA) and hold or
+                are
+                gaining appropriate qualifications.</p>
+        </div>
+    </div>
+
+    <div class="about-us p-5 text-center">
+        <div class="mt-2">
+            <img class="orange-drops-lg mr-2" src="/images/Gotitas comillas-naranjas.png">
+            <a class="btn-memb btn text-white" data-toggle="modal" data-target="#exampleModal"><h1
+                        class="font-weight-bold"> Submerge Aquatics Registration</h1></a>
+        </div>
+        <div>
+            <a class="btn-memb btn text-white" target="_blank"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSeRtOzelJk3OWrlkTOTLJkgvJ4xHoo3s5Qitg4mpg5Uif5www/viewform?usp=sf_link">
+                <h4 class="font-weight-bold border p-2"> Registration Form</h4></a>
+        </div>
+    </div>
+
+    <div class="mt-5 mb-5 p-md-0 p-3 container">
+        <div class="text-center">
+            <p class="h3 mb-4">Mission</p>
+            <p>Our simple but effective coaching mission is to be “Better Than Before”. Every swimmer in every session
+                has the goal of finishing in a better position than when they started.</p>
+            <p>At the Bronze and Silver level, the priority is to refine and develop a high level of technique and skill
+                while building a passion for our sport through fun and engaging activities and challenges. A focus on
+                quality at these levels sets each athlete up for long term success as an efficient swimmer.<br>
+                For Gold and Platinum level we have a clearly defined performance pathway (Gold-2→Gold-1→Platinum) and
+                what training/performance habits are expected to stay in this pathway.<br>
+                We also have sessions and resources for a fitness/participation pathway through the Fitness Development
+                Squad. This is also an ideal space for any injured competitive swimmers to rehab and stay involved with
+                the programme without pressure or interrupting those in the performance pathway.</p>
+            <p>To continue developing all of our athletes as great people, we will meet regularly in a group or
+                one-on-one environment to discuss commitments in and out of the pool, guiding and encouraging them to
+                make decisions, as well as working with parents on ways to best support their young people. This is in
+                line with the Balance is Better philosophy introduced by Sport New Zealand.<br>
+                We have a network of professional support providers that can assist with a range of areas outside of
+                the pool including nutrition, university support, counselling, physiotherapy, etc..</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row text-center text-lg-left">
+            <div class="gallery col-lg-3 col-md-4 col-6">
+                <a href="/images/SubAq5.jpeg" class="fancybox d-block mb-4 h-100" data-fancybox="gallery1">
+                    <img src="/images/SubAq5.jpeg" class="img-fluid img-thumbnail" alt="Selwyn">
+                </a>
+            </div>
+            <div class="gallery col-lg-3 col-md-4 col-6">
+                <a href="/images/SubAq3.jpeg" class="fancybox d-block mb-4 h-100" data-fancybox="gallery1">
+                    <img src="/images/SubAq3.jpeg" class="img-fluid img-thumbnail" alt="Selwyn">
+                </a>
+            </div>
+            <div class="gallery col-lg-3 col-md-4 col-6">
+                <a href="/images/SubAq4.jpeg" class="fancybox d-block mb-4 h-100" data-fancybox="gallery1">
+                    <img src="/images/SubAq4.jpeg" class="img-fluid img-thumbnail" alt="Selwyn">
+                </a>
+            </div>
+            <div class="gallery col-lg-3 col-md-4 col-6">
+                <a href="/images/SubAq2.jpeg" class="fancybox d-block mb-4 h-100" data-fancybox="gallery1">
+                    <img src="/images/SubAq2.jpeg" class="img-fluid img-thumbnail" alt="Selwyn">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 mb-5 p-md-0 p-3 container">
+        <div class="text-center">
+            <p class="h3 mb-4">Structure</p>
+            <p>
+                The structure of how we run the daily training programme is a perpetual programme that runs within
+                the 3-block structure that Swimming New Zealand have implemented, i.e. Jan-Apr, May-Aug, Sep-Dec.
+                This will give swimmers around 46-48 weeks of coached swimming available each year and we will
+                provide session plans for any required training when poolside coaching is not available
+                Bronze and Silver sessions run 3-4 streams with different options for training timetables. This
+                is because we know many of our athletes at this level attend school all around the district and
+                play multiple sports or have other activities, so we aim to offer a high level of flexibility that
+                still helps them achieve their swimming goals.
+            </p>
+        </div>
+    </div>
+</div>
+
+<%- include ("partials/footer.ejs") %>
+</body>
