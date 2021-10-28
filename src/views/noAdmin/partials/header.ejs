@@ -20,6 +20,11 @@
                     <%} else {%>
                         <a class="nav-item nav-link text-uppercase" href="/about-us">About Us</a>
                     <%}%>
+                    <%if (currentPage === "submerge-aquatics") { %>
+                        <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/submerge-aquatics">Submerge Aquatics</a>
+                    <%} else {%>
+                        <a class="nav-item nav-link text-uppercase" href="/submerge-aquatics">Submerge Aquatics</a>
+                     <%}%>
                     <%if (currentPage === "events") { %>
                         <a class="nav-item nav-link text-uppercase active-link font-weight-bold" href="/events">Events</a>
                     <%} else {%>
