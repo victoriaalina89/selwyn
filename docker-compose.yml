@@ -4,9 +4,9 @@ services:
     image: mysql/mysql-server
     restart: always
     environment:
-      MYSQL_DATABASE: 'db'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'password'
+      MYSQL_DATABASE: process.env.SELWYN_DB_DATABASE
+      MYSQL_USER: process.env.SELWYN_DB_USER
+      MYSQL_PASSWORD: process.env.SELWYN_DB_PASS
       MYSQL_ROOT_PASSWORD: 'password'
     ports:
       - '3306:3306'
